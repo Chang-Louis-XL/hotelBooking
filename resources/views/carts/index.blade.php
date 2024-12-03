@@ -94,13 +94,13 @@
                     </li>
                     @endforeach
                 </ul>
-                <div class="mt-4 mx-auto">
+                <div class="mt-4 mb-4 mx-auto">
                     <p>原價總計: TWD{{ Cart::getTotal() }}</p>
                     <p>優惠金額: TWD{{ Cart::getTotal() - Cart::getSubTotal() }}</p>
                     <p>總價: TWD{{ Cart::getSubTotal() }}</p>
                     <form action="/checkout" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-success">預定送出</button>
+                        <button type="submit " class="btn btn-success">預定送出</button>
                     </form>
                 </div>
             </div>

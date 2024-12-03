@@ -38,7 +38,7 @@ class RoomController extends Controller
             'original_price_without_breakfast' => $request->original_price_without_breakfast,
         ]);
 
-        return redirect('/')->with('success', '房間新增成功');
+        return redirect('rooms.index')->with('success', '房間新增成功');
     }
 
     public function show($id)
@@ -74,13 +74,13 @@ class RoomController extends Controller
             'original_price_without_breakfast' => $request->original_price_without_breakfast,
         ]);
 
-        return redirect('/')->with('success', '房間更新成功');
+        return redirect('rooms.index')->with('success', '房間更新成功');
     }
 
     public function destroy($id)
     {
         $room = Room::findOrFail($id);
         $room->delete();
-        return redirect('/')->with('success', '房間刪除成功');
+        return redirect('rooms.index')->with('success', '房間刪除成功');
     }
 }
